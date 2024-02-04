@@ -9,7 +9,7 @@ Deno から Java を経由して Sudachi を利用し、頻出単語をカウン
     - 最新が良い
   - Java
     - Sudachi が動作するバージョンであればよい。私は OpenJDK 11 を利用して確認した。
-- 別途ダウンロードが必要な者
+- 別途ダウンロードが必要なもの
   - Sudachi 本体
     - https://github.com/WorksApplications/Sudachi
   - Sudachi 辞書データ
