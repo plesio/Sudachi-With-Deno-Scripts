@@ -23,7 +23,7 @@ await buildUserDictionary();
 // 
 async function segmentText(): Promise<{ word: string; type: string; }[]> {
     const txt = await Deno.readTextFile(INPUT_FILE_PATH);
-    const result = await $`java -jar ${SUDACHI_EXEC} -s '{"userDict":["${USER_DIC_OUT_PATH}"], "systemDict":"${SYSTEM_DIC_PATH}"}'`.stdinText(txt).stdout("piped");
+    const result = await $`java -Dfile.encoding=UTF-8 -jar ${SUDACHI_EXEC} -s '{"userDict":["${USER_DIC_OUT_PATH}"], "systemDict":"${SYSTEM_DIC_PATH}"}'`.stdinText(txt).stdout("piped");
     const resultAllTxt = `${result.stdout}`;
     await Deno.writeFile(OUTPUT_FILE_DIR_PATH + "result_segment.txt", encoder.encode(resultAllTxt), { append: false });
     const resultArray = resultAllTxt.split("\n").map((line) => line.split("\t"));
