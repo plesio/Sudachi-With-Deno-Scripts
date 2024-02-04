@@ -21,6 +21,10 @@ Deno から Java を経由して Sudachi を利用し、頻出単語をカウン
   - macOS Monterey 
   - Deno 1.40.2
   - OpenJDK "11.0.14.1" 2022-02-08
+- Windows
+  - Windows 10 Home
+  - Deno 1.40.2
+  - OpenJDK 1.8.0_171-b11
 
 ## 使い方
 
